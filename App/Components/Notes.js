@@ -12,7 +12,7 @@ var {
     TouchableHighlight
     } = React;
 
-var styles = StyleSheet.create{(
+var styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column'
@@ -43,11 +43,11 @@ var styles = StyleSheet.create{(
         alignItems: 'center',
         flexDirection: 'row'
         }
-)}
+});
 
 class Notes extends React.Component{
     constructor(){
-        super(props);
+        super(this.props);
         this.ds = new ListView.DataSource({rowHasChanged: (row1, row2) => row1 !== row2});
         this.state = {
             dataSource: this.ds.cloneWithRows(this.props.notes),

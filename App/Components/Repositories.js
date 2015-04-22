@@ -53,7 +53,7 @@ class Repositories extends React.Component{
                     <View style={styles.rowContainer}>
                         <TouchableHighlight
                             onPress={this.openPage.bind(this, repos[index].html_url)}
-                            underlayColor='transparent'
+                            underlayColor='transparent'>
                             <Text style={styles.name}>{repos[index].name}</Text>
                             </TouchableHighlight>
                                 <Text style={styles.stars}> Stars: {repos[index].stargazers_count} </Text>
@@ -74,7 +74,7 @@ class Repositories extends React.Component{
 
 Repositories.propTypes = {
     userInfo: React.PropTypes.object.isRequired,
-    repos: React.Proptypes.array.isRequired
+    repos: React.PropTypes.array.isRequired
 };
 
 
